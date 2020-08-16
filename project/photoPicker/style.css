@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    /* 글자크기를 맞춰서 box를 형성하기 위해 box-sizing 사용*/
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+     /* 텍스트를 대문자로 바꿔서 나타남 */
+    color: white;
+    padding: 2rem;
+    background-image: linear-gradient(to right, #1d3977, #5296e9);
+    /* 오른쪽 방향으로 첫번째 색으로 부터 두번째 색으로 그라데이션을 입힌다 */
+}
+
+body {
+    padding: 0;
+    background: #d8dfea;
+    height: 100vh;
+}
+
+.container {
+    width: 760px;
+    margin: auto;
+    border: #ffffff solid 3px;
+    background: #ffffff;
+}
+
+.main-img img,
+.imgs img {
+    width: 100%;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* 4개씩 한줄에 담음 */
+    row-gap: .3rem;
+    column-gap: .3rem;
+}
+
+.imgs:hover {
+    cursor: pointer;
+}
