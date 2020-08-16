@@ -1,0 +1,292 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    background: rgb(134, 134, 134);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-links li i{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all .5s ease;
+}
+
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-image: url('./img/home.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;  
+}
+
+.home h1{
+    color: black;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px grey;
+    text-align: center;
+}
+
+.about_me {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.about_me_title {
+    margin-left: 6vw;
+    margin-right: 12vw;
+    width: 25vw;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.about_me_content {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-right: 8vw;
+    width: 100%;
+}
+
+.about_me h1{
+    padding: 1rem;
+    text-shadow: 1px 1px 2px grey;
+}
+
+.about_me p{
+    font-size: 1.3rem;
+    padding: .5rem;
+    text-shadow: 1px 1px 2px grey;
+    line-height: 1.5;
+}
+
+.project_title {
+    text-align: center;
+    color: black;
+    margin-bottom: 3em;
+}
+
+.project_title h1{
+    font-size: 3rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2% 5%;
+    grid-gap: 3rem;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+}
+
+.item{
+    border: none;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 1rem;
+    text-align: center;
+
+}
+
+.item img{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.item h3{
+    padding-bottom: 1rem;
+}
+
+.item .description{
+    grid-gap: 1rem;
+    font-size: .8rem;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+}
+
+.Contact {
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 25vh;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: rgb(134, 134, 134);;
+}
+
+.Contact_hedding {
+    font-family: 'Nanum Gothic', sans-serif;
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.Email {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.phone_number{
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media (max-width:768px){
+    body{
+        width: 100%;
+        overflow-x:hidden
+    }
+    nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+    .nav-links{
+            position: absolute;
+            right: 0;
+            z-index: auto;
+            height: 85.2vh;
+            top: 14.8vh;
+            background: rgb(134, 134, 134);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            transform: translateX(100%);
+            
+            transition: 0.5s ease-in;
+            overflow-x:hidden
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+    
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .home h1 {
+        padding-top: 5rem;
+    }
+
+    .about_me{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .about_me_content {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .about_me_title .hedding{
+        font-size: 2.2rem;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
